@@ -1,0 +1,20 @@
+<h2 class="title">Hello </h2>
+
+<!-- 
+<label *ngFor="let order of dataSource; let i = index" 
+(change)="selectedValues($event)">
+  <input type="checkbox" index="i">
+  {{dataSource[i].level}}
+</label> -->
+
+
+<section *ngFor="let item of dataSource">
+  <mat-checkbox name="test" [(ngModel)]="selectedVals" (change)="selectedValues($event)">{{item.name}}</mat-checkbox>
+</section>
+
+
+<form>
+
+  {{ dataSource | json}}
+
+</form>
